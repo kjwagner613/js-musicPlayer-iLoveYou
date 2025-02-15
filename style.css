@@ -1,0 +1,114 @@
+/* 🌸 Pink Theme Fix for iPhones */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #ffe4ec !important; /* Force light pink */
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🎀 Player Box */
+.player-container {
+  background: #ffb6c1 !important; /* Force pink */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 400px;
+  transition: all 0.3s;
+}
+
+/* 🎵 Fix the Audio Player */
+audio {
+  width: 100%;
+  display: block;
+  margin-top: 10px;
+  border-radius: 10px;
+  background: white;
+  padding: 5px;
+  -webkit-appearance: none; /* Force styling on iPhones */
+  appearance: none;
+  background-color: #ff69b4 !important; /* Hot pink */
+  border: 2px solid #ff1493; /* Deep pink border */
+}
+
+/* 🌸 Style Song List */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #ff69b4; /* Hot pink */
+  color: white;
+  padding: 15px;
+  margin: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+  transition: all 0.3s;
+}
+
+li:hover,
+li:active {
+  background: #ff1493; /* Deep pink */
+  transform: scale(1.05); /* Tiny pop effect */
+}
+
+/* 📱 iPhone & Mobile Fixes */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  .play-button, .pause-button, .next-button, .mute-button, .volume-up-button, .volume-down-button {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    border-radius: 5px; /* Adjust as desired */
+  .player-container {
+    position: relative; /* Essential for absolute positioning of children */
+    width: 90%; /* Or a specific pixel width if you prefer */
+    max-width: 480px; /* Optional: Set a maximum width for larger screens */
+    margin: 0 auto; /* Center the container on the page */
+    height: 0; /* Aspect ratio trick */
+    padding-bottom: 206.25%; /* 16:9 aspect ratio (adjust if needed) */
+    overflow: hidden; /* Hide content that overflows the container */
+    
+  }
+
+  .player-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* or contain, depending on your needs */
+    
+}
+
+  /* li {
+    font-size: 16px;
+    padding: 12px;
+  } */
+
+  audio {
+    height: 40px;
+    border-radius: 8px;
+    -webkit-appearance: none !important; /* Force pink on iPhones */
+    appearance: none;
+    background-color: #ff69b4 !important;
+    border: 2px solid #ff1493;
+  }
+  /* #controlUnit.player-container img {
+    padding: 20px;
+    border-radius: 10px;
+  } */
+}
+
+
